@@ -12,9 +12,10 @@ def count_primes(num):
     #Counter going up to the input
     x = 3
     
+    # x is going through every num up to input num
     while x <= num:
         #Checks if x is prime
-        for y in range(3,x,2):
+        for y in primes:
             if x%y == 0:
                 x += 2
                 break
