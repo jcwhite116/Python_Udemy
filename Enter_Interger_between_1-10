@@ -1,0 +1,33 @@
+def user_choice():
+    
+    # This original choice value can be anything that isn't an integer
+    choice = 'wrong'
+    acceptable_range = range(0,10)
+    within_range = False
+    
+    # Two conditions to check
+    # Digit OR within_range == False
+    
+    while choice.isdigit() == False or within_range == False:
+        
+        choice = input("Please enter a number (0-10): ")
+        
+        #Digit check
+        if choice.isdigit() == False:
+            print("That is not a digit")
+            
+        #Range Check
+        if choice.isdigit() == True:
+            if int(choice) in acceptable_range:
+                within_range = True
+            else:
+                print("Sorry, you are out of the acceptable range")
+                within_range = False
+                
+    return int(choice)
+        
+        
+        
+        
+        
+        
